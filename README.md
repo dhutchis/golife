@@ -4,6 +4,12 @@ Side project in development.  This is a Google Go implementation of the [Game of
 
 Interfaces with the [plaintext *.cells* file format](http://conwaylife.com/wiki/Plaintext).
 
+## Installation ##
+
+	go get github.com/denine99/glife/glife
+
+
+## Misc ##
 Here's some output from a Blinker:
 
     O O . . 
