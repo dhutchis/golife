@@ -13,8 +13,21 @@ func main() {
 	fmt.Printf("%T:\n%v\n", x, x)
 
 	var f glife.Field
-	file, _ := os.Open("../cells/beacon.cells")
+	file, err := os.Open("../cells/beacon.cells")
+	if err != nil {
+		fmt.Println("can't find beacon.cells file")
+		return
+	}
 	defer file.Close()
 	f = glife.ReadFieldFrom(file)
 	fmt.Printf("%T:\n%v\n", f, f)
+
+	f.Run(1)
+	fmt.Println(f)
+	f.Run(1)
+	fmt.Println(f)
+	f.Run(1)
+	fmt.Println(f)
+	f.Run(1)
+	fmt.Println(f)
 }
